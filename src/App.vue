@@ -6,8 +6,7 @@
 
 <template>
     <main>
-        <img src="./assets/img/vue_logo.svg" alt="" />
-        <div a="0" b="1" c="3"></div>
+        <img src="./assets/img/vue_logo.svg" alt="b" />
         <h1>Vue Weback Boilerplate</h1>
     </main>
 </template>
