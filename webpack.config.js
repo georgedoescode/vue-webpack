@@ -1,8 +1,10 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => {
@@ -19,6 +21,7 @@ module.exports = (env, argv) => {
                 chunks: 'all',
             },
         },
+        devtool: MODE === 'development' ? 'eval-source-map' : 'none',
         devServer: {
             contentBase: 'dist',
             port: 1234,
@@ -26,6 +29,8 @@ module.exports = (env, argv) => {
             overlay: {
                 errors: true,
             },
+            stats: 'errors-warnings',
+            clientLogLevel: 'silent',
         },
         module: {
             rules: [
@@ -86,7 +91,7 @@ module.exports = (env, argv) => {
                 template: './public/index.html',
             }),
             new MiniCssExtractPlugin(),
-            new StylelintPlugin(),
+            new StylelintPlugin({ files: ['src/**/*.{vue,scss,css}'] }),
             new CleanWebpackPlugin(),
         ],
     };
