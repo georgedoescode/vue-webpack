@@ -1,13 +1,17 @@
 <script>
+    import HelloWorld from './components/HelloWorld.vue';
+
     export default {
         name: 'App',
+        components: {
+            HelloWorld,
+        },
     };
 </script>
 
 <template>
     <main>
-        <img src="./assets/img/vue_logo.svg" alt="Vue logo" />
-        <h1>Vue Weback Boilerplate</h1>
+        <HelloWorld />
     </main>
 </template>
 
@@ -20,14 +24,5 @@
         align-items: center;
         padding: 1rem;
         font-family: 'Avenir', system-ui;
-    }
-
-    img {
-        max-width: 20rem;
-    }
-
-    h1 {
-        margin-top: 2rem;
-        text-align: center;
     }
 </style>
