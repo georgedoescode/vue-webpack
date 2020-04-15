@@ -10,5 +10,5 @@ The setup includes everything I like to have when starting a new vue project:
 -   prettier
 -   postcss
 -   dev server + hot module reloading
--   basic bundle splitting
+-   production ready builds ✅ - basic vendor splitting + minification
 -   CSS reset / normalize
