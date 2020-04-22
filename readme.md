@@ -1,3 +1,5 @@
+<img src="https://api.dependabot.com/badges/status?host=github&repo=georgedoescode/vue-webpack">
+
 # vue-webpack
 
 I found it quite difficult to get a good webpack setup going for vue projects outside of the CLI _(which is great, not knocking it at all!)_ so I decided to spin this up.
