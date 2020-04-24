@@ -16,6 +16,11 @@ module.exports = (env, argv) => {
             path: path.join(__dirname, 'dist'),
             filename: '[name].bundle.js',
         },
+        resolve: {
+            alias: {
+                '@': path.resolve(__dirname, 'src/'),
+            },
+        },
         optimization: {
             splitChunks: {
                 chunks: 'all',
@@ -26,6 +31,7 @@ module.exports = (env, argv) => {
             contentBase: 'dist',
             port: 1234,
             hot: true,
+            historyApiFallback: true,
             overlay: {
                 errors: true,
             },
