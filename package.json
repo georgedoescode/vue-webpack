@@ -32,7 +32,7 @@
         "stylelint": "^13.6.1",
         "stylelint-config-prettier": "^8.0.1",
         "stylelint-config-standard": "^20.0.0",
-        "stylelint-webpack-plugin": "^2.0.0",
+        "stylelint-webpack-plugin": "^2.1.0",
         "vue-loader": "^15.9.3",
         "vue-style-loader": "^4.1.2",
         "vue-template-compiler": "^2.6.11",
